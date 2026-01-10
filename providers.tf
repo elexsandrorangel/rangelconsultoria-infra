@@ -8,15 +8,15 @@ terraform {
 }
 
 provider "aws" {
-  # profile = "rangelconsultoria"
-  profile = "iac-user"
-  region  = "us-east-1"
+  profile = "rangelconsultoria"
+  #profile = "iac-user"
+  region = "us-east-1"
 
   default_tags {
     tags = {
       PROJECT     = "rangelconsultoria-infra"
       CREATED_BY  = "terraform"
-      ENVIRONMENT = "dev"
+      ENVIRONMENT = "Production"
     }
   }
 }

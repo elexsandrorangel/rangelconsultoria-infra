@@ -33,3 +33,7 @@ terraform.rc
 
 # Ignore .terraform.lock.hcl if you want to allow each user to generate their own lock file
 # .terraform.lock.hcl
+
+# Terraformer Cloud auto-generated files
+.terrraformer/
+generated/
