@@ -9,6 +9,11 @@ module "cloudfront" {
   comment     = "Imported CloudFront distribution"
 }
 
+module "s3" {
+  source      = "./modules/s3"
+  aws_region  = "us-east-1"
+  application = "rangelconsultoria"
+}
 # module "ec2" {
 #   source = "./modules/ec2"
 

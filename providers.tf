@@ -15,7 +15,7 @@ provider "aws" {
   default_tags {
     tags = {
       PROJECT     = "rangelconsultoria-infra"
-      CREATED_BY  = "terraform"
+      MANAGED_BY  = "terraform"
       ENVIRONMENT = "Production"
     }
   }
