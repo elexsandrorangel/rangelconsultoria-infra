@@ -21,7 +21,10 @@ This repository contains infrastructure as code managed with [Terraform](https:/
    ```sh
    terraform apply
    ```
-
+5. **To see sensitive values**
+   ```sh
+   terraform output -raw <key>
+   ```
 ## Best Practices
 - Do not commit `.tfstate` or `.tfvars` files.
 - Use remote backends for state management in production.
