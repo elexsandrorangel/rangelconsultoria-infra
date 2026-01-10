@@ -2,7 +2,7 @@ module "iam" {
   source = "./modules/iam"
 }
 
-module "cloudfront" {
+module "cloudfront" { # Depende do módulo S3
   source      = "./modules/cloudfront"
   environment = "Production"
   application = "rangelconsultoria"
@@ -13,6 +13,11 @@ module "s3" {
   source      = "./modules/s3"
   aws_region  = "us-east-1"
   application = "rangelconsultoria"
+}
+
+module "ecr" { # Depende do módulo KMS se for usar KMS
+  source     = "./modules/ecr"
+  aws_region = "us-east-1"
 }
 # module "ec2" {
 #   source = "./modules/ec2"
