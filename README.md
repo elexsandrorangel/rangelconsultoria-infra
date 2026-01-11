@@ -29,3 +29,7 @@ This repository contains infrastructure as code managed with [Terraform](https:/
 - Do not commit `.tfstate` or `.tfvars` files.
 - Use remote backends for state management in production.
 - Review changes before applying.
+
+
+Importação feita via 
+https://github.com/GoogleCloudPlatform/terraformer/blob/master/docs/aws.md

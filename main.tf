@@ -19,6 +19,10 @@ module "ecr" { # Depende do módulo KMS se for usar KMS
   source     = "./modules/ecr"
   aws_region = "us-east-1"
 }
+
+module "route53" {
+  source = "./modules/route53"
+}
 # module "ec2" {
 #   source = "./modules/ec2"
 
