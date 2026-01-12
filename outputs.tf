@@ -26,3 +26,7 @@ output "network" {
 output "route53" {
   value = module.route53
 }
+
+output "security" {
+  value = module.security
+}
