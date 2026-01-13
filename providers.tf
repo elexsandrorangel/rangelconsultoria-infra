@@ -5,6 +5,13 @@ terraform {
       version = ">= 6.28.0"
     }
   }
+
+  backend "azurerm" {
+    resource_group_name  = "personal"
+    storage_account_name = "rangeltfstorage"
+    container_name       = "tfstate"
+    key                  = "rangelconsultoria.terraform.tfstate"
+  }
 }
 
 provider "aws" {
