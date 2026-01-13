@@ -37,33 +37,3 @@ resource "aws_ecr_repository" "mywallet-ui" {
   name   = "mywallet/mywallet-ui"
   region = var.aws_region
 }
-
-resource "aws_ecr_repository" "papyrus-api" {
-  encryption_configuration {
-    encryption_type = "KMS"
-    kms_key         = var.kms_key_arn
-  }
-
-  image_scanning_configuration {
-    scan_on_push = false
-  }
-
-  image_tag_mutability = "MUTABLE"
-  name                 = "papyrus-api"
-  region               = var.aws_region
-}
-
-resource "aws_ecr_repository" "papyrus-web" {
-  encryption_configuration {
-    encryption_type = "KMS"
-    kms_key         = var.kms_key_arn
-  }
-
-  image_scanning_configuration {
-    scan_on_push = false
-  }
-
-  image_tag_mutability = "MUTABLE"
-  name                 = "papyrus-web"
-  region               = var.aws_region
-}
