@@ -1,12 +1,3 @@
-resource "aws_s3_bucket_versioning" "healthcheckapi-bucket" {
-  bucket = aws_s3_bucket.healthcheckapi-bucket.id
-  versioning_configuration {
-    status = var.enable_versioning ? "Enabled" : "Disabled"
-
-    # mfa_delete = var.mfa_delete ? "Enabled" : "Disabled"
-  }
-}
-
 resource "aws_s3_bucket_versioning" "rangelconsultoria-backups" {
   bucket = aws_s3_bucket.rangelconsultoria-backups.id
 
