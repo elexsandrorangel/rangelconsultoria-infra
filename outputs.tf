@@ -19,14 +19,14 @@ output "ecr" {
   value = module.ecr
 }
 
-output "network" {
-  value = module.network
-}
+# output "network" {
+#   value = module.network
+# }
 
 output "route53" {
   value = module.route53
 }
 
-output "security" {
-  value = module.security
-}
+# output "security" {
+#   value = module.security
+# }

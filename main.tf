@@ -24,17 +24,17 @@ module "route53" {
   source = "./modules/route53"
 }
 
-module "network" {
-  source     = "./modules/network"
-  aws_region = "us-east-1"
-}
+# module "network" {
+#   source     = "./modules/network"
+#   aws_region = "us-east-1"
+# }
 
-module "security" {
-  source            = "./modules/security"
-  vpc_id            = module.network.vpc_id
-  vpc_internal_cidr = "10.100.0.0/16"
-  aws_region        = "us-east-1"
-}
+# module "security" {
+#   source            = "./modules/security"
+#   vpc_id            = module.network.vpc_id
+#   vpc_internal_cidr = "10.100.0.0/16"
+#   aws_region        = "us-east-1"
+# }
 
 # module "ec2" {
 #   source = "./modules/ec2"
